@@ -61,7 +61,10 @@ def build_user_features(raw_dir=RAW_DIR, output_dir=PROCESSED_DIR):
     tabular["tx_per_merchant"] = tabular["tx_count"] / tabular["merchant_count"].clip(lower=1)
 
     graph = _graph_features(tx, users["user_id"].tolist())
-    features = users[["user_id", "ring_id", "is_fraud_ring"]].merge(tabular, on="user_id", how="left")
+    user_cols = ["user_id", "ring_id", "is_fraud_ring"]
+    if "ring_type" in users.columns:
+        user_cols.insert(2, "ring_type")
+    features = users[user_cols].merge(tabular, on="user_id", how="left")
     features = features.merge(graph, on="user_id", how="left").fillna(0)
 
     features.to_csv(output_dir / "user_features.csv", index=False)

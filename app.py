@@ -2,6 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 
 
 st.set_page_config(page_title="Fraud Ring Detection", layout="wide")
@@ -55,12 +56,13 @@ st.dataframe(filtered, use_container_width=True)
 st.subheader("Suspicious shared-infrastructure component")
 svg_path = REPORT_DIR / "suspicious_ring.svg"
 if svg_path.exists():
-    st.image(str(svg_path), use_column_width=True)
+    components.html(svg_path.read_text(), height=620, scrolling=False)
 
 selected_user = st.selectbox("Inspect user", scores["user_id"].head(200).tolist())
 row = features[features["user_id"] == selected_user].iloc[0]
 detail_cols = [
     "ring_id",
+    "ring_type",
     "is_fraud_ring",
     "component_size",
     "device_id_degree_max",
@@ -70,4 +72,5 @@ detail_cols = [
     "mule_merchant_rate",
     "graph_risk_score",
 ]
-st.dataframe(row[detail_cols].to_frame("value"), use_container_width=True)
+detail_cols = [col for col in detail_cols if col in row.index]
+st.dataframe(row[detail_cols].astype(str).to_frame("value"), use_container_width=True)

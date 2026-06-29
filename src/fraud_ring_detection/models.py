@@ -95,7 +95,10 @@ def train_and_evaluate():
     best_model, best_cols = fitted[best_name]
 
     all_scores = best_model.predict_proba(features[best_cols])[:, 1]
-    scored = features[["user_id", "ring_id", "is_fraud_ring", "component_id", "component_size"]].copy()
+    score_cols = ["user_id", "ring_id", "is_fraud_ring", "component_id", "component_size"]
+    if "ring_type" in features.columns:
+        score_cols.insert(2, "ring_type")
+    scored = features[score_cols].copy()
     scored["risk_score"] = all_scores
     scored = scored.sort_values("risk_score", ascending=False)
     scored.to_csv(PROCESSED_DIR / "user_scores.csv", index=False)
