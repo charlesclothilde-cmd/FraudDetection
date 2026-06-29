@@ -4,7 +4,7 @@ An end-to-end fraud analytics project that shows why relationship data can surfa
 
 The project simulates a payments ecosystem with users, merchants, devices, IP addresses, cards, and hidden fraud rings. The synthetic fraud includes account farms, mule merchants, shared-device rings, and promo abuse, plus benign shared behavior such as families, offices, coworking spaces, and student houses sharing IPs or occasional devices.
 
-It then trains a baseline tabular model and compares it with graph-enhanced models that use shared infrastructure signals such as common devices, IPs, cards, mule merchants, and connected component size. The final output is a Streamlit investigation dashboard for ranking high-risk users and inspecting suspicious shared-infrastructure components.
+It then trains a baseline tabular model and compares it with graph-enhanced models that use shared infrastructure signals such as common devices, IPs, cards, mule merchants, connected component size, and Node2Vec-style user embeddings. The final output is a Streamlit investigation dashboard for ranking high-risk users and inspecting suspicious shared-infrastructure components.
 
 ![Streamlit dashboard overview](reports/screenshots/streamlit-dashboard-overview.jpg)
 
@@ -55,21 +55,41 @@ The graph models add relationship features generated from shared identifiers and
 
 The final model is selected from logistic regression and random forest candidates, then saved to `models/fraud_ring_model.joblib`.
 
+### Node2Vec Embeddings
+
+The pipeline also builds a projected user-user graph from shared:
+
+- devices
+- IP addresses
+- cards
+- merchants
+
+It then creates Node2Vec-style embeddings using biased random walks over that graph. To keep the project easy to run in Colab, the implementation does not require a separate compiled graph package: it generates random walks, builds a sparse skip-gram co-occurrence matrix, and compresses that matrix into `n2v_*` embedding columns with truncated SVD.
+
+Training now compares:
+
+- `tabular_logistic`: tabular transaction aggregates only
+- `graph_logistic` and `graph_random_forest`: tabular plus handcrafted graph features
+- `node2vec_logistic`: tabular plus Node2Vec embeddings
+- `node2vec_random_forest`: tabular plus handcrafted graph features plus Node2Vec embeddings
+
 ## Results
 
 Current run: 8,000 users, 30,000 transactions, 305 injected fraud-ring users, and 30 benign shared-infrastructure groups.
 
 | Model | ROC AUC | Average Precision | Precision at Top 5% | Recall at Top 5% |
 | --- | ---: | ---: | ---: | ---: |
+| node2vec_random_forest | 0.99249 | 0.90940 | 0.541 | 0.879 |
 | graph_random_forest | 0.99221 | 0.89792 | 0.675 | 0.890 |
 | graph_logistic | 0.98711 | 0.87159 | 0.633 | 0.835 |
+| node2vec_logistic | 0.97842 | 0.80857 | 0.592 | 0.780 |
 | tabular_logistic | 0.95103 | 0.69113 | 0.558 | 0.736 |
 
-The best graph-enhanced model lifts top-5% recall from 0.736 to 0.890, meaning it surfaces substantially more fraud-ring users within the same analyst review capacity. It also improves average precision from 0.691 to 0.898, showing stronger ranking quality across the review queue.
+The best embedding-enhanced model improves average precision from 0.691 to 0.909, showing stronger ranking quality across the review queue. The strongest fixed-capacity review queue is still the handcrafted graph random forest, which lifts top-5% recall from 0.736 to 0.890.
 
-The graph model also improves precision at top 5%, from 0.558 to 0.675. In practice, that means the analyst queue contains both more ring members and fewer unrelated users at the same review depth.
+The graph random forest also improves precision at top 5%, from 0.558 to 0.675. In practice, that means the analyst queue contains both more ring members and fewer unrelated users at the same review depth. The Node2Vec random forest is the best overall ranker by average precision, while the handcrafted graph model is currently the best strict top-5% triage model.
 
-## Why Graph Features Beat Tabular Features
+## Why Graph ML Beats Tabular Features
 
 Tabular features describe what a user did in isolation. Graph features describe who and what the user is connected to.
 
@@ -160,7 +180,6 @@ Training writes the main artifacts used by the app and README:
 ## Next Upgrades
 
 - Add temporal graph features such as shared infrastructure within rolling windows.
-- Add node embeddings such as Node2Vec once graph dependencies are available.
 - Convert the graph to PyTorch Geometric for GraphSAGE node classification.
 - Add threshold tuning based on analyst capacity and investigation cost.
 - Add SHAP or permutation importance to explain top review candidates.

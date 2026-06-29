@@ -48,6 +48,8 @@ GRAPH_FEATURES = [
     "graph_risk_score",
 ]
 
+NODE2VEC_FEATURES = ["n2v_%02d" % ix for ix in range(16)]
+
 
 def train_and_evaluate():
     MODEL_DIR.mkdir(parents=True, exist_ok=True)
@@ -65,6 +67,7 @@ def train_and_evaluate():
     models = {
         "tabular_logistic": _logistic_pipeline(),
         "graph_logistic": _logistic_pipeline(),
+        "node2vec_logistic": _logistic_pipeline(),
         "graph_random_forest": RandomForestClassifier(
             n_estimators=250,
             max_depth=8,
@@ -73,11 +76,21 @@ def train_and_evaluate():
             random_state=42,
             n_jobs=-1,
         ),
+        "node2vec_random_forest": RandomForestClassifier(
+            n_estimators=300,
+            max_depth=10,
+            min_samples_leaf=6,
+            class_weight="balanced",
+            random_state=42,
+            n_jobs=-1,
+        ),
     }
     feature_sets = {
         "tabular_logistic": TABULAR_FEATURES,
         "graph_logistic": TABULAR_FEATURES + GRAPH_FEATURES,
+        "node2vec_logistic": TABULAR_FEATURES + NODE2VEC_FEATURES,
         "graph_random_forest": TABULAR_FEATURES + GRAPH_FEATURES,
+        "node2vec_random_forest": TABULAR_FEATURES + GRAPH_FEATURES + NODE2VEC_FEATURES,
     }
 
     rows = []

@@ -1,7 +1,11 @@
+from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from scipy import sparse
+from sklearn.decomposition import TruncatedSVD
+from sklearn.preprocessing import normalize
 
 
 RAW_DIR = Path("data/raw")
@@ -60,16 +64,147 @@ def build_user_features(raw_dir=RAW_DIR, output_dir=PROCESSED_DIR):
     tabular["amount_std"] = tabular["amount_std"].fillna(0.0)
     tabular["tx_per_merchant"] = tabular["tx_count"] / tabular["merchant_count"].clip(lower=1)
 
-    graph = _graph_features(tx, users["user_id"].tolist())
+    user_ids = users["user_id"].tolist()
+    graph = _graph_features(tx, user_ids)
+    embeddings = build_node2vec_embeddings(tx, user_ids)
     user_cols = ["user_id", "ring_id", "is_fraud_ring"]
     if "ring_type" in users.columns:
         user_cols.insert(2, "ring_type")
     features = users[user_cols].merge(tabular, on="user_id", how="left")
     features = features.merge(graph, on="user_id", how="left").fillna(0)
+    features = features.merge(embeddings, on="user_id", how="left").fillna(0)
 
     features.to_csv(output_dir / "user_features.csv", index=False)
     tx.to_csv(output_dir / "transactions_enriched.csv", index=False)
     return features
+
+
+def build_node2vec_embeddings(
+    tx,
+    user_ids,
+    dimensions=16,
+    walk_length=12,
+    walks_per_node=3,
+    window_size=4,
+    p=1.0,
+    q=0.5,
+    random_state=42,
+):
+    """Create Node2Vec-style user embeddings from shared identifiers.
+
+    The implementation avoids optional compiled dependencies so the project
+    remains easy to run in Colab: it generates biased random walks, builds a
+    skip-gram co-occurrence matrix, and compresses it with SVD.
+    """
+    rng = np.random.RandomState(random_state)
+    user_ids = list(user_ids)
+    index = {user_id: ix for ix, user_id in enumerate(user_ids)}
+    adjacency = _build_user_user_graph(tx, user_ids)
+    walks = _node2vec_walks(adjacency, user_ids, walk_length, walks_per_node, p, q, rng)
+    cooccurrence = _walk_cooccurrence(walks, index, window_size)
+
+    n_users = len(user_ids)
+    max_components = max(1, min(dimensions, n_users - 1, cooccurrence.shape[1] - 1))
+    if max_components < 1 or cooccurrence.sum() == 0:
+        values = np.zeros((n_users, dimensions))
+    else:
+        svd = TruncatedSVD(n_components=max_components, random_state=random_state)
+        values = svd.fit_transform(cooccurrence)
+        values = normalize(values)
+        if max_components < dimensions:
+            values = np.pad(values, ((0, 0), (0, dimensions - max_components)))
+
+    cols = ["n2v_%02d" % ix for ix in range(dimensions)]
+    return pd.DataFrame(values, columns=cols).assign(user_id=user_ids)[["user_id"] + cols]
+
+
+def _build_user_user_graph(tx, user_ids):
+    adjacency = {user_id: defaultdict(float) for user_id in user_ids}
+    relation_weights = {
+        "device_id": 3.0,
+        "ip_id": 2.0,
+        "card_id": 3.0,
+        "merchant_id": 0.6,
+    }
+    max_group_sizes = {
+        "device_id": 80,
+        "ip_id": 120,
+        "card_id": 60,
+        "merchant_id": 35,
+    }
+
+    for col, weight in relation_weights.items():
+        pairs = tx[["user_id", col]].drop_duplicates()
+        for _, group in pairs.groupby(col):
+            users = group["user_id"].tolist()
+            if len(users) < 2 or len(users) > max_group_sizes[col]:
+                continue
+            edge_weight = weight / np.log1p(len(users))
+            for i, left in enumerate(users):
+                if left not in adjacency:
+                    continue
+                for right in users[i + 1 :]:
+                    if right not in adjacency:
+                        continue
+                    adjacency[left][right] += edge_weight
+                    adjacency[right][left] += edge_weight
+
+    return {user: dict(neighbors) for user, neighbors in adjacency.items()}
+
+
+def _node2vec_walks(adjacency, user_ids, walk_length, walks_per_node, p, q, rng):
+    walks = []
+    for _ in range(walks_per_node):
+        shuffled = list(user_ids)
+        rng.shuffle(shuffled)
+        for start in shuffled:
+            walks.append(_node2vec_walk(adjacency, start, walk_length, p, q, rng))
+    return walks
+
+
+def _node2vec_walk(adjacency, start, walk_length, p, q, rng):
+    walk = [start]
+    while len(walk) < walk_length:
+        current = walk[-1]
+        neighbors = list(adjacency.get(current, {}))
+        if not neighbors:
+            break
+        weights = np.array([adjacency[current][neighbor] for neighbor in neighbors], dtype=float)
+        if len(walk) > 1:
+            previous = walk[-2]
+            adjusted = []
+            previous_neighbors = adjacency.get(previous, {})
+            for neighbor, weight in zip(neighbors, weights):
+                if neighbor == previous:
+                    adjusted.append(weight / p)
+                elif neighbor in previous_neighbors:
+                    adjusted.append(weight)
+                else:
+                    adjusted.append(weight / q)
+            weights = np.array(adjusted, dtype=float)
+        probabilities = weights / weights.sum()
+        walk.append(rng.choice(neighbors, p=probabilities))
+    return walk
+
+
+def _walk_cooccurrence(walks, index, window_size):
+    rows = []
+    cols = []
+    data = []
+    for walk in walks:
+        positions = [index[node] for node in walk if node in index]
+        for pos, center in enumerate(positions):
+            left = max(0, pos - window_size)
+            right = min(len(positions), pos + window_size + 1)
+            for ctx_pos in range(left, right):
+                if ctx_pos == pos:
+                    continue
+                context = positions[ctx_pos]
+                distance = abs(ctx_pos - pos)
+                rows.append(center)
+                cols.append(context)
+                data.append(1.0 / distance)
+    return sparse.coo_matrix((data, (rows, cols)), shape=(len(index), len(index)), dtype=np.float32).tocsr()
 
 
 def _graph_features(tx, user_ids):
