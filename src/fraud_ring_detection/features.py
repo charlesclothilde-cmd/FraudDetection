@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import numpy as np
@@ -239,6 +239,7 @@ def _graph_features(tx, user_ids):
 
     component = _shared_identifier_components(tx, user_ids, identifier_cols)
     frames.append(component.set_index("user_id"))
+    frames.append(_explainability_features(tx, user_ids).set_index("user_id"))
 
     graph = pd.concat(frames, axis=1).reset_index().rename(columns={"index": "user_id"}).fillna(0)
     graph["shared_device_ip_pressure"] = (
@@ -251,6 +252,95 @@ def _graph_features(tx, user_ids):
         + 0.20 * np.log1p(graph["merchant_degree_max"])
     )
     return graph
+
+
+def _explainability_features(tx, user_ids):
+    user_ids = list(user_ids)
+    explanations = {
+        user_id: {
+            "shared_device_count": 0,
+            "shared_ip_count": 0,
+            "linked_users": Counter(),
+            "linked_entities": [],
+        }
+        for user_id in user_ids
+    }
+    user_set = set(user_ids)
+
+    relation_configs = [
+        ("device_id", "device", "shared_device_count", 4.0, 80),
+        ("ip_id", "ip", "shared_ip_count", 3.0, 120),
+        ("card_id", "card", None, 3.5, 60),
+        ("merchant_id", "merchant", None, 1.0, 35),
+    ]
+
+    for col, label, count_col, weight, max_group_size in relation_configs:
+        pairs = tx[["user_id", col]].drop_duplicates()
+        if col == "merchant_id" and "is_mule_merchant" in tx.columns:
+            mule_lookup = tx.groupby(col)["is_mule_merchant"].max().to_dict()
+        else:
+            mule_lookup = {}
+
+        for entity_id, group in pairs.groupby(col):
+            users = [user for user in group["user_id"].tolist() if user in user_set]
+            degree = len(users)
+            if degree < 2:
+                continue
+            if degree > max_group_size:
+                continue
+
+            is_mule = bool(mule_lookup.get(entity_id, 0))
+            entity_label = "%s:%s (%d users%s)" % (
+                label,
+                entity_id,
+                degree,
+                ", mule" if is_mule else "",
+            )
+            link_weight = weight / np.log1p(degree)
+
+            for user in users:
+                if count_col is not None:
+                    explanations[user][count_col] += 1
+                explanations[user]["linked_entities"].append((degree, is_mule, entity_label))
+                for other in users:
+                    if other != user:
+                        explanations[user]["linked_users"][other] += link_weight
+
+    if "is_mule_merchant" in tx.columns:
+        mule_exposure = (
+            tx[tx["is_mule_merchant"] == 1]
+            .groupby("user_id")["merchant_id"]
+            .nunique()
+            .to_dict()
+        )
+    else:
+        mule_exposure = {}
+
+    rows = []
+    for user_id in user_ids:
+        explanation = explanations[user_id]
+        top_users = [
+            user for user, _ in explanation["linked_users"].most_common(5)
+        ]
+        top_entities = [
+            entity
+            for _, _, entity in sorted(
+                explanation["linked_entities"],
+                key=lambda item: (item[1], item[0], item[2]),
+                reverse=True,
+            )[:5]
+        ]
+        rows.append(
+            {
+                "user_id": user_id,
+                "shared_device_count": explanation["shared_device_count"],
+                "shared_ip_count": explanation["shared_ip_count"],
+                "mule_merchant_exposure": int(mule_exposure.get(user_id, 0)),
+                "top_linked_users": ", ".join(top_users),
+                "top_linked_entities": "; ".join(top_entities),
+            }
+        )
+    return pd.DataFrame(rows)
 
 
 def _shared_identifier_components(tx, user_ids, identifier_cols):

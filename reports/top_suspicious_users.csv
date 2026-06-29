@@ -1,101 +1,101 @@
-user_id,ring_id,ring_type,is_fraud_ring,component_id,component_size,risk_score
-u_04641,ring_11,promo_abuse,1,u_05254,7509,0.999727897214831
-u_00968,ring_03,promo_abuse,1,u_05254,7509,0.9997267984599457
-u_05315,ring_11,promo_abuse,1,u_05254,7509,0.9994964017688913
-u_02979,ring_03,promo_abuse,1,u_05254,7509,0.9994601316285177
-u_06313,ring_04,account_farm,1,u_05254,7509,0.9994463407979752
-u_06140,ring_12,account_farm,1,u_05254,7509,0.9993181918668159
-u_00326,ring_03,promo_abuse,1,u_05254,7509,0.9993039629183316
-u_02605,ring_03,promo_abuse,1,u_05254,7509,0.9992650478963819
-u_03108,ring_11,promo_abuse,1,u_05254,7509,0.9991953636751311
-u_02250,ring_12,account_farm,1,u_05254,7509,0.9991152080139544
-u_04402,ring_00,account_farm,1,u_05254,7509,0.9990805775914644
-u_02968,ring_00,account_farm,1,u_05254,7509,0.9990445170890063
-u_07223,ring_16,account_farm,1,u_05254,7509,0.9983919588843114
-u_00668,ring_11,promo_abuse,1,u_05254,7509,0.9981620907205185
-u_04421,ring_12,account_farm,1,u_05254,7509,0.9980408646878939
-u_03166,ring_12,account_farm,1,u_05254,7509,0.9975667287571952
-u_07986,ring_16,account_farm,1,u_05254,7509,0.9972231503480122
-u_06866,ring_08,account_farm,1,u_05254,7509,0.997046989203792
-u_00831,ring_19,promo_abuse,1,u_05254,7509,0.9964513306013898
-u_05222,ring_08,account_farm,1,u_05254,7509,0.9961391311195827
-u_01982,ring_16,account_farm,1,u_05254,7509,0.9960692488580518
-u_00544,ring_19,promo_abuse,1,u_05254,7509,0.9959554270929677
-u_07244,ring_04,account_farm,1,u_05254,7509,0.9958539785286867
-u_05779,ring_12,account_farm,1,u_05254,7509,0.9954106115636218
-u_02457,ring_00,account_farm,1,u_05254,7509,0.995179815935446
-u_07150,ring_12,account_farm,1,u_05254,7509,0.9951500904589896
-u_02413,ring_19,promo_abuse,1,u_05254,7509,0.9950028444641891
-u_01409,ring_03,promo_abuse,1,u_05254,7509,0.9947754943096508
-u_05160,ring_03,promo_abuse,1,u_05254,7509,0.9943764477441314
-u_01767,ring_11,promo_abuse,1,u_05254,7509,0.994368004666654
-u_07921,ring_11,promo_abuse,1,u_05254,7509,0.9940417241905876
-u_00147,ring_12,account_farm,1,u_05254,7509,0.9939127323017758
-u_00904,ring_10,shared_devices,1,u_05254,7509,0.9938964717008556
-u_06159,ring_04,account_farm,1,u_05254,7509,0.9936826371631249
-u_01921,ring_16,account_farm,1,u_05254,7509,0.9936678234248545
-u_04655,ring_16,account_farm,1,u_05254,7509,0.9930165281377109
-u_00885,ring_07,promo_abuse,1,u_05254,7509,0.9919473054883129
-u_05857,ring_08,account_farm,1,u_05254,7509,0.9918991580503884
-u_02334,ring_11,promo_abuse,1,u_05254,7509,0.9916329605134122
-u_04099,ring_16,account_farm,1,u_05254,7509,0.9915905892752456
-u_02452,ring_00,account_farm,1,u_05254,7509,0.9915185980399258
-u_07869,ring_11,promo_abuse,1,u_05254,7509,0.9914968446457588
-u_01526,ring_04,account_farm,1,u_05254,7509,0.9913454613119335
-u_00636,ring_16,account_farm,1,u_05254,7509,0.9912230658843869
-u_05286,ring_10,shared_devices,1,u_05254,7509,0.9912192065652887
-u_01141,ring_19,promo_abuse,1,u_05254,7509,0.9911208544309384
-u_04805,ring_04,account_farm,1,u_05254,7509,0.9910710762739391
-u_05572,ring_11,promo_abuse,1,u_05254,7509,0.9910225287614665
-u_01327,ring_19,promo_abuse,1,u_05254,7509,0.9909942392338934
-u_05773,ring_08,account_farm,1,u_05254,7509,0.9908519689721015
-u_05426,ring_16,account_farm,1,u_05254,7509,0.9907848910026784
-u_03802,ring_12,account_farm,1,u_05254,7509,0.9905734551719998
-u_04163,ring_12,account_farm,1,u_05254,7509,0.9899196653858492
-u_07766,ring_00,account_farm,1,u_05254,7509,0.9898710710963615
-u_02105,ring_03,promo_abuse,1,u_05254,7509,0.9897697327119895
-u_03027,ring_04,account_farm,1,u_05254,7509,0.9897394641329644
-u_06583,ring_03,promo_abuse,1,u_05254,7509,0.9896741854428446
-u_06892,ring_08,account_farm,1,u_05254,7509,0.9887238548125465
-u_02088,ring_12,account_farm,1,u_05254,7509,0.9872353596747481
-u_04778,ring_08,account_farm,1,u_05254,7509,0.9865652299931463
-u_04777,ring_03,promo_abuse,1,u_05254,7509,0.9861345454113382
-u_03182,ring_04,account_farm,1,u_05254,7509,0.9859203409092933
-u_00584,ring_12,account_farm,1,u_05254,7509,0.9858547526177843
-u_07333,ring_12,account_farm,1,u_05254,7509,0.9856856781070692
-u_03245,ring_04,account_farm,1,u_05254,7509,0.9855753862175266
-u_07382,ring_10,shared_devices,1,u_05254,7509,0.9850099448045742
-u_06419,ring_10,shared_devices,1,u_05254,7509,0.9849910165502372
-u_07122,ring_10,shared_devices,1,u_05254,7509,0.9846689482595917
-u_04852,ring_03,promo_abuse,1,u_05254,7509,0.9836629432380865
-u_02754,ring_16,account_farm,1,u_05254,7509,0.9836367799583756
-u_05876,ring_00,account_farm,1,u_05254,7509,0.983407652616194
-u_00228,ring_12,account_farm,1,u_05254,7509,0.9833356130290111
-u_07767,ring_19,promo_abuse,1,u_05254,7509,0.9828469873834248
-u_00234,ring_08,account_farm,1,u_05254,7509,0.9826549988360982
-u_05158,ring_17,mule_merchants,1,u_05254,7509,0.9815053448394029
-u_01853,ring_00,account_farm,1,u_05254,7509,0.9814686271341451
-u_06118,ring_03,promo_abuse,1,u_05254,7509,0.9784447093530093
-u_06178,ring_04,account_farm,1,u_05254,7509,0.9779312993068193
-u_02940,ring_00,account_farm,1,u_05254,7509,0.9773474852402495
-u_07216,ring_04,account_farm,1,u_05254,7509,0.9769763918011866
-u_05134,ring_16,account_farm,1,u_05254,7509,0.976878841881751
-u_04342,ring_11,promo_abuse,1,u_05254,7509,0.9760728028277025
-u_07449,ring_08,account_farm,1,u_05254,7509,0.9747962355679636
-u_07344,ring_08,account_farm,1,u_05254,7509,0.9737484995383103
-u_00208,ring_19,promo_abuse,1,u_05254,7509,0.9731974085372275
-u_06117,ring_08,account_farm,1,u_05254,7509,0.9725643125367253
-u_01545,ring_12,account_farm,1,u_05254,7509,0.9719555972402486
-u_00763,ring_16,account_farm,1,u_05254,7509,0.9717755995077586
-u_02780,ring_00,account_farm,1,u_05254,7509,0.9717347424731014
-u_01454,ring_00,account_farm,1,u_05254,7509,0.9712960995323144
-u_03482,ring_17,mule_merchants,1,u_05254,7509,0.9705059808087854
-u_03882,ring_19,promo_abuse,1,u_05254,7509,0.9699921936528925
-u_07651,ring_04,account_farm,1,u_05254,7509,0.9698412160207284
-u_03384,ring_12,account_farm,1,u_05254,7509,0.9696387547109033
-u_00024,ring_12,account_farm,1,u_05254,7509,0.9689586322478935
-u_07160,ring_08,account_farm,1,u_05254,7509,0.9669333708895035
-u_06422,ring_03,promo_abuse,1,u_05254,7509,0.9669053571987092
-u_03801,ring_17,mule_merchants,1,u_05254,7509,0.9668491347119971
-u_00060,ring_04,account_farm,1,u_05254,7509,0.9667582238207696
-u_02118,ring_03,promo_abuse,1,u_05254,7509,0.9667424688015664
+user_id,ring_id,ring_type,is_fraud_ring,component_id,component_size,shared_device_count,shared_ip_count,mule_merchant_exposure,top_linked_users,top_linked_entities,risk_score
+u_04641,ring_11,promo_abuse,1,u_05254,7509,1,1,1,"u_04567, u_03108, u_05572, u_02352, u_05315",merchant:m_1172 (32 users); merchant:m_0706 (26 users); merchant:m_1083 (18 users); device:rd_11_00 (9 users); ip:rip_11_01 (8 users),0.999727897214831
+u_00968,ring_03,promo_abuse,1,u_05254,7509,2,1,2,"u_07110, u_04828, u_02605, u_07840, u_00015",device:rd_03_00 (13 users); ip:rip_03_01 (8 users); device:d_009422 (2 users); card:c_005993 (2 users),0.9997267984599458
+u_05315,ring_11,promo_abuse,1,u_05254,7509,3,2,2,"u_03357, u_07720, u_00668, u_02185, u_05596","merchant:m_0164 (34 users, mule); merchant:m_0470 (31 users); merchant:m_0257 (28 users); merchant:m_0124 (25 users); merchant:m_0724 (23 users)",0.9994964017688913
+u_02979,ring_03,promo_abuse,1,u_05254,7509,1,2,1,"u_03757, u_02228, u_02999, u_03056, u_03386",merchant:m_0791 (22 users); merchant:m_0778 (22 users); device:rd_03_00 (13 users); ip:ip_009071 (3 users); card:c_002377 (3 users),0.9994601316285177
+u_06313,ring_04,account_farm,1,u_05254,7509,3,1,1,"u_07651, u_07244, u_01340, u_06296, u_01858",merchant:m_0399 (25 users); device:rd_04_00 (16 users); ip:rip_04_01 (7 users); card:rc_04_00 (3 users); card:c_003704 (3 users),0.9994463407979752
+u_06140,ring_12,account_farm,1,u_05254,7509,1,1,2,"u_00320, u_04603, u_04421, u_05700, u_04310",merchant:m_0394 (30 users); device:rd_12_01 (12 users); ip:rip_12_02 (6 users); card:c_006769 (2 users); card:c_002853 (2 users),0.9993181918668159
+u_00326,ring_03,promo_abuse,1,u_05254,7509,1,1,2,"u_00796, u_05160, u_03662, u_03267, u_03095","merchant:m_0737 (31 users, mule); device:rd_03_00 (13 users); ip:rip_03_00 (6 users); card:c_007038 (4 users)",0.9993039629183316
+u_02605,ring_03,promo_abuse,1,u_05254,7509,2,1,1,"u_04994, u_06232, u_07840, u_00968, u_04788",merchant:m_0736 (34 users); merchant:m_0771 (20 users); device:rd_03_00 (13 users); ip:rip_03_01 (8 users); card:c_001025 (4 users),0.9992650478963819
+u_03108,ring_11,promo_abuse,1,u_05254,7509,2,1,1,"u_06055, u_05572, u_00106, u_04855, u_04641","merchant:m_0164 (34 users, mule); merchant:m_0987 (21 users); device:rd_11_00 (9 users); ip:rip_11_01 (8 users); card:c_002032 (3 users)",0.9991953636751308
+u_02250,ring_12,account_farm,1,u_05254,7509,1,1,1,"u_06830, u_03802, u_07150, u_06965, u_06935",merchant:m_0301 (25 users); merchant:m_0898 (24 users); device:rd_12_00 (12 users); ip:rip_12_01 (8 users); card:c_006896 (5 users),0.9991152080139544
+u_04402,ring_00,account_farm,1,u_05254,7509,1,2,1,"u_02968, u_01454, u_00322, u_05876, u_02780",device:rd_00_00 (12 users); ip:rip_00_01 (10 users); card:c_007706 (3 users); ip:ip_010498 (2 users),0.9990805775914644
+u_02968,ring_00,account_farm,1,u_05254,7509,1,2,1,"u_01122, u_01454, u_00322, u_05876, u_02780",merchant:m_0144 (31 users); merchant:m_0974 (29 users); device:rd_00_00 (12 users); ip:rip_00_01 (10 users); card:c_005581 (5 users),0.9990445170890063
+u_07223,ring_16,account_farm,1,u_05254,7509,2,1,1,"u_04099, u_05788, u_06884, u_07979, u_07841",merchant:m_0817 (23 users); device:rd_16_00 (16 users); device:d_005916 (3 users); card:c_006545 (3 users); ip:rip_16_02 (2 users),0.9983919588843114
+u_00668,ring_11,promo_abuse,1,u_05254,7509,1,2,1,"u_05315, u_05681, u_05596, u_07214, u_03397","merchant:m_0164 (34 users, mule); merchant:m_0002 (33 users); merchant:m_0694 (31 users); device:rd_11_00 (9 users); ip:rip_11_00 (8 users)",0.9981620907205183
+u_04421,ring_12,account_farm,1,u_05254,7509,1,2,1,"u_06140, u_05700, u_04310, u_07460, u_04541",merchant:m_0267 (35 users); merchant:m_0870 (29 users); merchant:m_0595 (24 users); merchant:m_1083 (18 users); device:rd_12_01 (12 users),0.9980408646878939
+u_03166,ring_12,account_farm,1,u_05254,7509,1,2,1,"u_02840, u_03724, u_04163, u_03524, u_00024",merchant:m_0327 (30 users); merchant:m_1198 (23 users); merchant:m_0951 (22 users); device:rd_12_01 (12 users); ip:rip_12_00 (11 users),0.9975667287571952
+u_07986,ring_16,account_farm,1,u_05254,7509,3,1,1,"u_01753, u_06683, u_07520, u_07729, u_01908",merchant:m_0595 (24 users); merchant:m_0882 (23 users); merchant:m_1182 (20 users); device:rd_16_00 (16 users); ip:ip_007468 (3 users),0.9972231503480122
+u_06866,ring_08,account_farm,1,u_05254,7509,2,1,1,"u_05980, u_01562, u_02948, u_07449, u_05857",merchant:m_0253 (27 users); ip:rip_08_00 (20 users); device:rd_08_00 (7 users); device:d_007228 (4 users); card:c_005216 (2 users),0.997046989203792
+u_00831,ring_19,promo_abuse,1,u_05254,7509,3,2,1,"u_06548, u_03573, u_01141, u_01327, u_00544",merchant:m_0916 (28 users); merchant:m_0708 (26 users); merchant:m_0805 (18 users); ip:rip_19_00 (17 users); merchant:m_0979 (14 users),0.9964513306013898
+u_05222,ring_08,account_farm,1,u_05254,7509,1,1,1,"u_02438, u_07426, u_01774, u_02871, u_05698",merchant:m_0555 (29 users); merchant:m_0264 (25 users); merchant:m_0850 (21 users); ip:rip_08_00 (20 users); device:d_004537 (5 users),0.9961391311195827
+u_01982,ring_16,account_farm,1,u_05254,7509,2,1,1,"u_00763, u_00879, u_07526, u_05440, u_01911",merchant:m_0421 (30 users); merchant:m_0332 (29 users); device:rd_16_00 (16 users); ip:rip_16_01 (4 users); device:d_000513 (3 users),0.9960692488580518
+u_00544,ring_19,promo_abuse,1,u_05254,7509,2,2,1,"u_02352, u_01141, u_01416, u_01327, u_00831",merchant:m_0975 (29 users); merchant:m_0749 (26 users); merchant:m_0654 (26 users); ip:rip_19_00 (17 users); device:rd_19_00 (6 users),0.9959554270929677
+u_07244,ring_04,account_farm,1,u_05254,7509,2,3,2,"u_06313, u_07651, u_04972, u_07790, u_05891","merchant:m_0459 (34 users, mule); merchant:m_0933 (25 users); merchant:m_0100 (20 users); device:rd_04_00 (16 users); ip:rip_04_00 (12 users)",0.9958539785286867
+u_05779,ring_12,account_farm,1,u_05254,7509,1,2,1,"u_04880, u_04891, u_06977, u_01545, u_04016",merchant:m_0019 (34 users); merchant:m_0277 (31 users); merchant:m_1189 (26 users); merchant:m_0780 (26 users); device:rd_12_00 (12 users),0.9954106115636218
+u_02457,ring_00,account_farm,1,u_05254,7509,0,1,1,"u_07655, u_02968, u_01853, u_02780, u_01454",ip:rip_00_01 (10 users); card:rc_00_00 (2 users),0.995179815935446
+u_07150,ring_12,account_farm,1,u_05254,7509,1,2,1,"u_00024, u_04033, u_03802, u_02250, u_01093",merchant:m_0577 (24 users); merchant:m_0560 (22 users); merchant:m_0590 (19 users); device:rd_12_00 (12 users); ip:rip_12_01 (8 users),0.9951500904589896
+u_02413,ring_19,promo_abuse,1,u_05254,7509,3,2,2,"u_01341, u_01538, u_03670, u_00166, u_03764","merchant:m_0466 (32 users, mule); merchant:m_0291 (28 users); merchant:m_0924 (20 users); ip:rip_19_00 (17 users); device:d_004433 (3 users)",0.9950028444641891
+u_01409,ring_03,promo_abuse,1,u_05254,7509,2,3,2,"u_07298, u_05158, u_00559, u_00952, u_05526",merchant:m_0183 (25 users); merchant:m_1149 (22 users); device:rd_03_00 (13 users); ip:ip_005876 (4 users); ip:ip_006029 (3 users),0.9947754943096508
+u_05160,ring_03,promo_abuse,1,u_05254,7509,3,1,2,"u_03253, u_03969, u_00796, u_00326, u_01668",merchant:m_0618 (26 users); device:rd_03_00 (13 users); ip:rip_03_00 (6 users); device:d_002379 (3 users); card:c_005833 (3 users),0.9943764477441314
+u_01767,ring_11,promo_abuse,1,u_05254,7509,1,2,1,"u_06887, u_00792, u_00669, u_07022, u_00335","merchant:m_0164 (34 users, mule); merchant:m_0386 (33 users); merchant:m_0870 (29 users); merchant:m_0482 (29 users); merchant:m_0574 (28 users)",0.994368004666654
+u_07921,ring_11,promo_abuse,1,u_05254,7509,1,2,2,"u_07910, u_06018, u_04745, u_07583, u_00009","merchant:m_0164 (34 users, mule); ip:rip_11_01 (8 users); card:c_006112 (4 users); ip:ip_002500 (2 users); device:d_003600 (2 users)",0.9940417241905878
+u_00147,ring_12,account_farm,1,u_05254,7509,1,1,1,"u_03384, u_02779, u_02899, u_04891, u_06977",device:rd_12_00 (12 users); ip:rip_12_02 (6 users); card:c_007930 (3 users),0.9939127323017758
+u_00904,ring_10,shared_devices,1,u_05254,7509,1,2,1,"u_07382, u_06419, u_04791, u_06187, u_06924",merchant:m_0365 (31 users); device:rd_10_00 (10 users); ip:rip_10_01 (4 users); card:c_004601 (3 users); ip:ip_010047 (2 users),0.9938964717008556
+u_06159,ring_04,account_farm,1,u_05254,7509,2,2,1,"u_05987, u_00358, u_03228, u_03495, u_06178",merchant:m_0907 (25 users); merchant:m_0729 (25 users); merchant:m_0146 (22 users); merchant:m_0497 (20 users); device:rd_04_00 (16 users),0.9936826371631249
+u_01921,ring_16,account_farm,1,u_05254,7509,2,1,1,"u_03294, u_00636, u_04913, u_05426, u_04655",merchant:m_0753 (33 users); merchant:m_0188 (32 users); merchant:m_0530 (30 users); merchant:m_0995 (19 users); device:rd_16_00 (16 users),0.9936678234248545
+u_04655,ring_16,account_farm,1,u_05254,7509,1,3,1,"u_00879, u_00636, u_01921, u_04913, u_05426",merchant:m_0994 (32 users); merchant:m_0087 (25 users); merchant:m_0122 (17 users); device:rd_16_00 (16 users); ip:rip_16_00 (7 users),0.9930165281377109
+u_00885,ring_07,promo_abuse,1,u_05254,7509,2,5,3,"u_07148, u_02782, u_02802, u_03541, u_05994","merchant:m_0459 (34 users, mule); merchant:m_0656 (29 users, mule); merchant:m_0173 (20 users); ip:ip_004326 (4 users); ip:rip_07_02 (3 users)",0.9919473054883131
+u_05857,ring_08,account_farm,1,u_05254,7509,1,1,1,"u_07615, u_02948, u_07449, u_05698, u_06866",merchant:m_0251 (29 users); merchant:m_1046 (26 users); ip:rip_08_00 (20 users); device:rd_08_00 (7 users); card:c_003446 (2 users),0.9918991580503884
+u_02334,ring_11,promo_abuse,1,u_05254,7509,1,1,1,"u_04387, u_01206, u_07869, u_03108, u_07921",merchant:m_0840 (33 users); merchant:m_0770 (32 users); merchant:m_0490 (30 users); merchant:m_1166 (26 users); merchant:m_1150 (19 users),0.9916329605134122
+u_04099,ring_16,account_farm,1,u_05254,7509,2,1,1,"u_07223, u_05283, u_04688, u_00636, u_01921",merchant:m_0171 (23 users); device:rd_16_00 (16 users); ip:rip_16_02 (2 users); device:d_007284 (2 users); card:c_002453 (2 users),0.9915905892752456
+u_02452,ring_00,account_farm,1,u_05254,7509,1,1,1,"u_04807, u_02430, u_06426, u_00333, u_02968",merchant:m_0270 (35 users); merchant:m_0559 (26 users); merchant:m_0431 (25 users); merchant:m_0004 (21 users); ip:rip_00_01 (10 users),0.9915185980399256
+u_07869,ring_11,promo_abuse,1,u_05254,7509,5,3,2,"u_00183, u_07302, u_05693, u_02179, u_04284","merchant:m_0164 (34 users, mule); merchant:m_1102 (28 users); merchant:m_0345 (19 users); ip:rip_11_01 (8 users); device:d_007336 (5 users)",0.9914968446457588
+u_01526,ring_04,account_farm,1,u_05254,7509,1,2,1,"u_06178, u_06159, u_01464, u_07216, u_07244",merchant:m_0528 (25 users); merchant:m_1059 (21 users); merchant:m_0728 (21 users); merchant:m_0398 (20 users); device:rd_04_00 (16 users),0.9913454613119335
+u_00636,ring_16,account_farm,1,u_05254,7509,2,1,1,"u_02026, u_06256, u_01921, u_04913, u_05426",merchant:m_0376 (31 users); merchant:m_0500 (19 users); device:rd_16_00 (16 users); ip:rip_16_00 (7 users); device:d_009615 (3 users),0.9912230658843869
+u_05286,ring_10,shared_devices,1,u_05254,7509,1,3,2,"u_00105, u_01735, u_07360, u_06419, u_00027","merchant:m_0110 (34 users, mule); merchant:m_0960 (28 users); device:rd_10_00 (10 users); ip:ip_002115 (5 users); card:c_002730 (3 users)",0.9912192065652887
+u_01141,ring_19,promo_abuse,1,u_05254,7509,2,1,2,"u_06496, u_00544, u_03681, u_01327, u_00831","merchant:m_0466 (32 users, mule); merchant:m_0975 (29 users); merchant:m_0607 (25 users); ip:rip_19_00 (17 users); device:rd_19_00 (6 users)",0.9911208544309384
+u_04805,ring_04,account_farm,1,u_05254,7509,2,1,2,"u_04298, u_06313, u_01234, u_07651, u_00154",device:rd_04_00 (16 users); ip:rip_04_01 (7 users); card:c_003396 (3 users); device:d_001835 (2 users),0.9910710762739391
+u_05572,ring_11,promo_abuse,1,u_05254,7509,2,1,2,"u_04037, u_03108, u_04641, u_00958, u_02257","merchant:m_0164 (34 users, mule); device:rd_11_00 (9 users); ip:rip_11_01 (8 users); card:c_000744 (3 users); device:d_003745 (2 users)",0.9910225287614665
+u_01327,ring_19,promo_abuse,1,u_05254,7509,2,4,1,"u_04998, u_07073, u_01141, u_00831, u_00544",merchant:m_0628 (29 users); merchant:m_0162 (27 users); merchant:m_0083 (22 users); ip:rip_19_00 (17 users); device:rd_19_00 (6 users),0.9909942392338934
+u_05773,ring_08,account_farm,1,u_05254,7509,2,1,1,"u_05230, u_07449, u_06892, u_02268, u_06848",merchant:m_0320 (35 users); merchant:m_0975 (29 users); ip:rip_08_00 (20 users); merchant:m_0090 (18 users); card:rc_08_01 (5 users),0.9908519689721015
+u_05426,ring_16,account_farm,1,u_05254,7509,1,2,1,"u_04090, u_00636, u_01921, u_04913, u_04655",merchant:m_0343 (32 users); merchant:m_0138 (24 users); merchant:m_0238 (23 users); device:rd_16_00 (16 users); merchant:m_0796 (14 users),0.9907848910026784
+u_03802,ring_12,account_farm,1,u_05254,7509,1,1,1,"u_07065, u_02479, u_07150, u_02250, u_04891",device:rd_12_00 (12 users); ip:rip_12_01 (8 users); card:c_005926 (2 users); card:c_002125 (2 users),0.9905734551719998
+u_04163,ring_12,account_farm,1,u_05254,7509,1,2,1,"u_02682, u_03724, u_03166, u_02926, u_01830",merchant:m_0469 (31 users); merchant:m_0816 (27 users); device:rd_12_01 (12 users); ip:rip_12_00 (11 users); ip:ip_005581 (4 users),0.9899196653858492
+u_07766,ring_00,account_farm,1,u_05254,7509,1,2,1,"u_00887, u_02940, u_07418, u_07385, u_03949",merchant:m_0764 (29 users); device:rd_00_00 (12 users); ip:rip_00_00 (4 users); ip:ip_003846 (3 users); card:c_008576 (2 users),0.9898710710963615
+u_02105,ring_03,promo_abuse,1,u_05254,7509,3,2,1,"u_06227, u_05071, u_01702, u_01145, u_07013",merchant:m_0201 (34 users); merchant:m_0663 (24 users); merchant:m_0646 (21 users); merchant:m_0446 (20 users); ip:rip_03_01 (8 users),0.9897697327119895
+u_03027,ring_04,account_farm,1,u_05254,7509,1,1,1,"u_05703, u_01451, u_02374, u_06419, u_06855",ip:rip_04_00 (12 users); device:d_009333 (3 users); card:c_007720 (3 users); card:c_003201 (2 users),0.9897394641329644
+u_06583,ring_03,promo_abuse,1,u_05254,7509,0,1,2,"u_03333, u_06422, u_02105, u_06211, u_02118",ip:rip_03_01 (8 users); card:c_006583 (2 users),0.9896741854428446
+u_06892,ring_08,account_farm,1,u_05254,7509,2,2,1,"u_00186, u_07676, u_01840, u_07344, u_05773",merchant:m_0365 (31 users); merchant:m_0055 (26 users); merchant:m_1088 (21 users); ip:rip_08_00 (20 users); device:rd_08_01 (6 users),0.9887238548125465
+u_02088,ring_12,account_farm,1,u_05254,7509,1,2,3,"u_04065, u_04757, u_00838, u_01749, u_03177","merchant:m_0794 (33 users, mule); merchant:m_0056 (33 users, mule); merchant:m_0986 (28 users); ip:rip_12_00 (11 users); device:d_007733 (3 users)",0.9872353596747483
+u_04778,ring_08,account_farm,1,u_05254,7509,3,0,1,"u_04019, u_04924, u_02903, u_00234, u_01881",merchant:m_0364 (30 users); merchant:m_0055 (26 users); device:rd_08_01 (6 users); device:d_007271 (3 users); card:rc_08_00 (3 users),0.9865652299931463
+u_04777,ring_03,promo_abuse,1,u_05254,7509,1,2,2,"u_04353, u_05145, u_02867, u_03033, u_00497","merchant:m_0056 (33 users, mule); merchant:m_1164 (29 users); merchant:m_0777 (24 users); merchant:m_1088 (21 users); device:rd_03_00 (13 users)",0.9861345454113382
+u_03182,ring_04,account_farm,1,u_05254,7509,2,2,1,"u_06913, u_05920, u_06178, u_06159, u_01526",merchant:m_0584 (35 users); device:rd_04_00 (16 users); ip:rip_04_00 (12 users); ip:ip_005434 (2 users); device:d_004734 (2 users),0.9859203409092933
+u_00584,ring_12,account_farm,1,u_05254,7509,1,1,1,"u_01277, u_05700, u_04891, u_06977, u_03724",merchant:m_0817 (23 users); merchant:m_0078 (21 users); ip:rip_12_00 (11 users); device:d_006807 (2 users); card:c_001505 (2 users),0.9858547526177843
+u_07333,ring_12,account_farm,1,u_05254,7509,3,2,1,"u_05358, u_03416, u_07955, u_07354, u_07176",merchant:m_0002 (33 users); merchant:m_0769 (28 users); merchant:m_0803 (27 users); merchant:m_1024 (25 users); merchant:m_1092 (24 users),0.9856856781070692
+u_03245,ring_04,account_farm,1,u_05254,7509,1,1,1,"u_02728, u_06178, u_06159, u_01526, u_01464",merchant:m_0448 (25 users); device:rd_04_00 (16 users); merchant:m_0715 (15 users); ip:rip_04_00 (12 users); card:c_001037 (2 users),0.9855753862175266
+u_07382,ring_10,shared_devices,1,u_05254,7509,2,2,1,"u_00904, u_06419, u_05331, u_00858, u_05509",merchant:m_0453 (28 users); merchant:m_0291 (28 users); device:rd_10_00 (10 users); ip:rip_10_01 (4 users); ip:ip_009700 (4 users),0.9850099448045742
+u_06419,ring_10,shared_devices,1,u_05254,7509,1,2,2,"u_00904, u_07382, u_03027, u_06855, u_00897","merchant:m_0110 (34 users, mule); merchant:m_0604 (29 users); merchant:m_0786 (24 users); merchant:m_0809 (22 users); device:rd_10_00 (10 users)",0.9849910165502372
+u_07122,ring_10,shared_devices,1,u_05254,7509,1,3,2,"u_07006, u_00170, u_05745, u_03980, u_03513","merchant:m_0568 (33 users, mule); merchant:m_0492 (29 users); merchant:m_0525 (27 users); merchant:m_0752 (25 users); device:rd_10_00 (10 users)",0.9846689482595917
+u_04852,ring_03,promo_abuse,1,u_05254,7509,2,2,2,"u_02999, u_03574, u_04535, u_05235, u_05145",merchant:m_1002 (31 users); merchant:m_0361 (24 users); merchant:m_0380 (22 users); device:rd_03_00 (13 users); ip:ip_005952 (3 users),0.9836629432380865
+u_02754,ring_16,account_farm,1,u_05254,7509,2,1,1,"u_03646, u_06720, u_00636, u_01921, u_04913",merchant:m_0751 (26 users); merchant:m_0744 (26 users); merchant:m_0516 (24 users); device:rd_16_00 (16 users); ip:rip_16_00 (7 users),0.9836367799583756
+u_05876,ring_00,account_farm,1,u_05254,7509,3,2,1,"u_03304, u_06238, u_04450, u_02968, u_01454",merchant:m_0878 (20 users); merchant:m_0625 (20 users); device:rd_00_00 (12 users); ip:rip_00_01 (10 users); ip:ip_009881 (3 users),0.983407652616194
+u_00228,ring_12,account_farm,1,u_05254,7509,3,3,1,"u_06026, u_03020, u_04957, u_04012, u_04897",merchant:m_0376 (31 users); merchant:m_0965 (29 users); merchant:m_0654 (26 users); merchant:m_0579 (21 users); device:rd_12_01 (12 users),0.9833356130290111
+u_07767,ring_19,promo_abuse,1,u_05254,7509,0,3,1,"u_01764, u_00132, u_00793, u_00210, u_03882","merchant:m_0466 (32 users, mule); merchant:m_0889 (31 users); merchant:m_0876 (28 users); merchant:m_0538 (26 users); ip:rip_19_00 (17 users)",0.9828469873834248
+u_00234,ring_08,account_farm,1,u_05254,7509,1,1,1,"u_00847, u_01881, u_04044, u_04778, u_06117",merchant:m_0408 (31 users); merchant:m_1177 (30 users); merchant:m_0443 (30 users); merchant:m_0670 (27 users); merchant:m_0398 (20 users),0.9826549988360982
+u_05158,ring_17,mule_merchants,1,u_05254,7509,2,5,4,"u_00059, u_05548, u_02267, u_05557, u_01422","merchant:m_0474 (32 users, mule); merchant:m_0420 (30 users, mule); merchant:m_0112 (26 users, mule); merchant:m_1009 (20 users); device:rd_17_00 (5 users)",0.9815053448394029
+u_01853,ring_00,account_farm,1,u_05254,7509,3,3,1,"u_07846, u_07040, u_04510, u_05209, u_02968",merchant:m_0845 (34 users); merchant:m_1054 (24 users); merchant:m_1136 (19 users); merchant:m_0174 (19 users); device:rd_00_00 (12 users),0.9814686271341451
+u_06118,ring_03,promo_abuse,1,u_05254,7509,1,1,2,"u_01832, u_07404, u_00168, u_00796, u_05160",merchant:m_0182 (27 users); ip:rip_03_00 (6 users); device:d_002612 (3 users); card:c_002773 (2 users),0.9784447093530093
+u_06178,ring_04,account_farm,1,u_05254,7509,2,2,1,"u_02193, u_01920, u_05684, u_06159, u_01526",merchant:m_0999 (30 users); merchant:m_0097 (24 users); merchant:m_0552 (23 users); merchant:m_0316 (19 users); device:rd_04_00 (16 users),0.9779312993068193
+u_02940,ring_00,account_farm,1,u_05254,7509,1,1,1,"u_00887, u_07766, u_01797, u_07576, u_06273",merchant:m_0290 (32 users); merchant:m_0421 (30 users); merchant:m_0884 (28 users); merchant:m_0216 (27 users); device:rd_00_00 (12 users),0.9773474852402497
+u_07216,ring_04,account_farm,1,u_05254,7509,2,1,1,"u_04084, u_04001, u_03424, u_06178, u_06159",merchant:m_0823 (32 users); merchant:m_0798 (29 users); merchant:m_0024 (28 users); device:rd_04_00 (16 users); merchant:m_0436 (14 users),0.9769763918011866
+u_05134,ring_16,account_farm,1,u_05254,7509,1,2,1,"u_06671, u_03451, u_00636, u_01921, u_04913",merchant:m_0695 (31 users); merchant:m_0766 (26 users); merchant:m_1114 (23 users); device:rd_16_00 (16 users); merchant:m_0177 (14 users),0.976878841881751
+u_04342,ring_11,promo_abuse,1,u_05254,7509,1,2,2,"u_03630, u_05714, u_00482, u_04082, u_02732","merchant:m_0164 (34 users, mule); merchant:m_0326 (25 users); ip:rip_11_00 (8 users); device:d_002067 (3 users); ip:ip_006304 (2 users)",0.9760728028277023
+u_07449,ring_08,account_farm,1,u_05254,7509,1,1,2,"u_06848, u_05773, u_06892, u_02268, u_02948","merchant:m_0806 (28 users, mule); merchant:m_0836 (31 users); merchant:m_0528 (25 users); ip:rip_08_00 (20 users); device:rd_08_00 (7 users)",0.9747962355679636
+u_07344,ring_08,account_farm,1,u_05254,7509,2,2,2,"u_07676, u_06892, u_01840, u_05931, u_04820","merchant:m_0140 (16 users, mule); merchant:m_1186 (26 users); ip:rip_08_00 (20 users); device:rd_08_01 (6 users); ip:ip_009971 (3 users)",0.9737484995383103
+u_00208,ring_19,promo_abuse,1,u_05254,7509,1,1,1,"u_02786, u_01678, u_07279, u_02123, u_07850",merchant:m_0187 (25 users); ip:rip_19_00 (17 users); device:d_007219 (4 users); card:c_006855 (4 users),0.9731974085372275
+u_06117,ring_08,account_farm,1,u_05254,7509,3,1,2,"u_06398, u_06304, u_01220, u_04727, u_00234","merchant:m_0487 (33 users, mule); merchant:m_0408 (31 users); ip:rip_08_00 (20 users); merchant:m_0029 (19 users); device:d_006255 (2 users)",0.9725643125367252
+u_01545,ring_12,account_farm,1,u_05254,7509,1,1,2,"u_04891, u_06977, u_05779, u_04016, u_03384",merchant:m_0471 (33 users); merchant:m_0054 (29 users); merchant:m_0135 (22 users); device:rd_12_00 (12 users); ip:rip_12_00 (11 users),0.9719555972402486
+u_00763,ring_16,account_farm,1,u_05254,7509,1,2,1,"u_00879, u_01982, u_07526, u_04440, u_05373",merchant:m_0169 (30 users); merchant:m_0429 (25 users); merchant:m_0731 (20 users); device:rd_16_00 (16 users); ip:rip_16_01 (4 users),0.9717755995077586
+u_02780,ring_00,account_farm,1,u_05254,7509,2,1,1,"u_05794, u_07658, u_02968, u_01454, u_00322",merchant:m_0666 (26 users); merchant:m_0577 (24 users); merchant:m_0160 (21 users); merchant:m_0014 (21 users); merchant:m_0409 (15 users),0.9717347424731015
+u_01454,ring_00,account_farm,1,u_05254,7509,1,1,2,"u_02968, u_00322, u_05876, u_02780, u_01853","merchant:m_0761 (30 users, mule); merchant:m_0486 (25 users); merchant:m_0278 (25 users); merchant:m_0363 (24 users); device:rd_00_00 (12 users)",0.9712960995323144
+u_03482,ring_17,mule_merchants,1,u_05254,7509,2,1,3,"u_02267, u_04666, u_05557, u_05158, u_00059","merchant:m_0420 (30 users, mule); merchant:m_0112 (26 users, mule); device:rd_17_00 (5 users); device:d_003808 (4 users); ip:rip_17_00 (3 users)",0.9705059808087854
+u_03882,ring_19,promo_abuse,1,u_05254,7509,2,2,2,"u_06001, u_07546, u_07631, u_07767, u_01141","merchant:m_0466 (32 users, mule); merchant:m_1025 (26 users, mule); merchant:m_0649 (23 users); ip:rip_19_00 (17 users); ip:ip_008298 (2 users)",0.9699921936528925
+u_07651,ring_04,account_farm,1,u_05254,7509,1,2,1,"u_06313, u_07244, u_04805, u_01234, u_00154",merchant:m_0295 (28 users); merchant:m_0402 (21 users); device:rd_04_00 (16 users); ip:rip_04_01 (7 users); card:rc_04_00 (3 users),0.9698412160207284
+u_03384,ring_12,account_farm,1,u_05254,7509,1,2,2,"u_00147, u_03622, u_04891, u_06977, u_05779","merchant:m_0418 (21 users, mule); merchant:m_0388 (33 users); device:rd_12_00 (12 users); ip:rip_12_02 (6 users); ip:ip_009504 (2 users)",0.9696387547109033
+u_00024,ring_12,account_farm,1,u_05254,7509,0,1,1,"u_07150, u_03166, u_02029, u_03560, u_03172",merchant:m_0842 (30 users); merchant:m_0577 (24 users); ip:rip_12_01 (8 users); card:c_002084 (5 users); card:rc_12_01 (3 users),0.9689586322478935
+u_07160,ring_08,account_farm,1,u_05254,7509,1,1,1,"u_05941, u_00005, u_04351, u_05222, u_05698",merchant:m_0976 (24 users); ip:rip_08_00 (20 users); device:d_002765 (3 users); card:c_006111 (2 users),0.9669333708895035
+u_06422,ring_03,promo_abuse,1,u_05254,7509,3,1,1,"u_06523, u_00605, u_01260, u_01398, u_00260",merchant:m_0282 (26 users); merchant:m_0455 (25 users); merchant:m_0728 (21 users); merchant:m_0810 (20 users); ip:rip_03_01 (8 users),0.9669053571987092
+u_03801,ring_17,mule_merchants,1,u_05254,7509,1,2,2,"u_03760, u_02246, u_03106, u_03111, u_01193","merchant:m_0466 (32 users, mule); card:c_000596 (4 users); ip:ip_010316 (3 users); ip:ip_002923 (3 users); device:d_000128 (2 users)",0.9668491347119973
+u_00060,ring_04,account_farm,1,u_05254,7509,2,2,1,"u_04218, u_03492, u_01954, u_07008, u_01333",merchant:m_0323 (34 users); ip:rip_04_01 (7 users); card:c_006536 (4 users); card:c_001657 (4 users); device:d_008298 (3 users),0.9667582238207696
+u_02118,ring_03,promo_abuse,1,u_05254,7509,0,2,2,"u_03362, u_07403, u_04887, u_06422, u_02105",merchant:m_0352 (27 users); merchant:m_0850 (21 users); ip:rip_03_01 (8 users); card:c_005743 (3 users); ip:ip_006494 (2 users),0.9667424688015662

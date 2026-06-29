@@ -108,7 +108,18 @@ def train_and_evaluate():
     best_model, best_cols = fitted[best_name]
 
     all_scores = best_model.predict_proba(features[best_cols])[:, 1]
-    score_cols = ["user_id", "ring_id", "is_fraud_ring", "component_id", "component_size"]
+    score_cols = [
+        "user_id",
+        "ring_id",
+        "is_fraud_ring",
+        "component_id",
+        "component_size",
+        "shared_device_count",
+        "shared_ip_count",
+        "mule_merchant_exposure",
+        "top_linked_users",
+        "top_linked_entities",
+    ]
     if "ring_type" in features.columns:
         score_cols.insert(2, "ring_type")
     scored = features[score_cols].copy()

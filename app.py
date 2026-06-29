@@ -51,7 +51,21 @@ with right:
 st.subheader("Highest-risk users")
 threshold = st.slider("Minimum risk score", 0.0, 1.0, 0.5, 0.01)
 filtered = scores[scores["risk_score"] >= threshold].head(200)
-st.dataframe(filtered, use_container_width=True)
+explain_cols = [
+    "user_id",
+    "risk_score",
+    "ring_id",
+    "ring_type",
+    "is_fraud_ring",
+    "shared_device_count",
+    "shared_ip_count",
+    "component_size",
+    "mule_merchant_exposure",
+    "top_linked_users",
+    "top_linked_entities",
+]
+visible_cols = [col for col in explain_cols if col in filtered.columns]
+st.dataframe(filtered[visible_cols], use_container_width=True)
 
 st.subheader("Suspicious shared-infrastructure component")
 svg_path = REPORT_DIR / "suspicious_ring.svg"
@@ -64,7 +78,12 @@ detail_cols = [
     "ring_id",
     "ring_type",
     "is_fraud_ring",
+    "shared_device_count",
+    "shared_ip_count",
     "component_size",
+    "mule_merchant_exposure",
+    "top_linked_users",
+    "top_linked_entities",
     "device_id_degree_max",
     "ip_id_degree_max",
     "card_id_degree_max",
