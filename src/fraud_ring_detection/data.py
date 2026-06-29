@@ -108,7 +108,7 @@ def generate_synthetic_data(
 
     tx_rows = []
     user_weights = np.ones(n_users)
-    user_weights[users["is_fraud_ring"].values == 1] = 4.0
+    user_weights[users["is_fraud_ring"].values == 1] = 1.35
     user_weights = user_weights / user_weights.sum()
     tx_users = rng.choice(users["user_id"].values, size=n_transactions, replace=True, p=user_weights)
 
@@ -118,8 +118,8 @@ def generate_synthetic_data(
         ring_id = ring_id_lookup[user_id]
         amount_base = rng.lognormal(mean=3.3, sigma=0.75)
         if is_ring:
-            amount = amount_base * rng.uniform(1.4, 4.5)
-            is_online = int(rng.rand() < 0.88)
+            amount = amount_base * rng.uniform(0.9, 2.2)
+            is_online = int(rng.rand() < 0.62)
             hour = int(rng.choice(list(range(24)), p=_hour_probs(fraud=True)))
             merchant_id = rng.choice(ring_merchant_lookup[user_id]) if rng.rand() < 0.7 else rng.choice(merchant_ids)
             device_id = device_lookup[user_id] if rng.rand() < 0.82 else rng.choice(normal_devices)
@@ -171,8 +171,8 @@ def generate_synthetic_data(
 def _hour_probs(fraud=False):
     probs = np.ones(24, dtype=float)
     if fraud:
-        probs[:6] = 4.0
-        probs[20:] = 2.2
+        probs[:6] = 1.8
+        probs[20:] = 1.5
     else:
         probs[:6] = 0.25
         probs[9:20] = 1.8
