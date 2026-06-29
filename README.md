@@ -20,6 +20,13 @@ python3 -m streamlit run app.py
 
 The dashboard will read generated artifacts from `data/processed/`, `models/`, and `reports/`.
 
+For a larger Colab-style run:
+
+```bash
+python3 generate_data.py --users 20000 --transactions 150000 --rings 50
+python3 train_model.py
+```
+
 ## Project Structure
 
 ```text
